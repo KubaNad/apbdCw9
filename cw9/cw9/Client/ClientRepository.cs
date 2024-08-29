@@ -44,10 +44,10 @@ public class ClientRepository : IClientRepository
         return await _context.SaveChangesAsync() > 0;
     }
     
-    // public async Task<bool> IsClientStoredAsync(int clientId)
-    // {
-    //     return await _context.Set<ClientTrip>() // Zakładając, że ClientTrip to klasa reprezentująca tabelę Client_Trip
-    //         .AnyAsync(ct => ct.IdClient == clientId);
-    // }
+    public async Task<bool> IsClientStoredAsync(int clientId)
+    {
+        return await _context.Set<ClientTrip>() // Zakładając, że ClientTrip to klasa reprezentująca tabelę Client_Trip
+            .AnyAsync(ct => ct.IdClient == clientId);
+    }
     
 }

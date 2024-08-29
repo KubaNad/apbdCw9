@@ -8,4 +8,6 @@ public interface IClientRepository
     Task AddClientAsync(Models.Client client);
     Task DeleteClientAsync(Models.Client client);
     Task<bool> SaveChangesAsync();
+
+    Task<bool> IsClientStoredAsync(int clientId);
 }

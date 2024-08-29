@@ -17,7 +17,10 @@ public class ClientService : IClientService
     public async Task<bool> DeleteClientAsync(int clientId)
     {
         var client = await _clientRepository.GetClientByIdAsync(clientId);
-        if (client == null || client.ClientTrips.Count > 0)
+
+        var counterTrpis = await _clientRepository.IsClientStoredAsync(clientId);
+        
+        if (client == null || counterTrpis)
         {
             return false;
         }
