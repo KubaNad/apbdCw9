@@ -1,4 +1,5 @@
 using cw9.Client;
+using cw9.ClientTrip;
 using cw9.Context;
 using cw9.Trip;
 using Microsoft.EntityFrameworkCore;
@@ -28,7 +29,8 @@ if (app.Environment.IsDevelopment())
 
 app.RegisterEndpointsForTrips();
 app.RegisterEndpointsForClient();
-
+app.RegisterEndpointsForClientTrips();
+    
 app.UseHttpsRedirection();
 
 app.Run();

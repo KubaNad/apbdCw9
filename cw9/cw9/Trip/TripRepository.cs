@@ -22,6 +22,15 @@ public class TripRepository : ITripRepository
             .Take(pageSize)
             .ToListAsync();
     }
+    
+    public async Task<Models.Trip?> GetTripByIdAsync(int tripId)
+    {
+        return await _context.Trips
+            .Include(t => t.ClientTrips)
+            .ThenInclude(ct => ct.IdClientNavigation)
+            .Include(t => t.IdCountries)
+            .FirstOrDefaultAsync(t => t.IdTrip == tripId);
+    }
     public async Task<int> GetTripsCountAsync()
     {
         return await _context.Trips.CountAsync();

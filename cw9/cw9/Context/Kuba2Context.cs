@@ -18,7 +18,7 @@ public partial class Kuba2Context : DbContext
 
     public virtual DbSet<Models.Client> Clients { get; set; }
 
-    public virtual DbSet<ClientTrip> ClientTrips { get; set; }
+    public virtual DbSet<Models.ClientTrip> ClientTrips { get; set; }
 
     public virtual DbSet<Country> Countries { get; set; }
 
@@ -43,7 +43,7 @@ public partial class Kuba2Context : DbContext
             entity.Property(e => e.Telephone).HasMaxLength(120);
         });
 
-        modelBuilder.Entity<ClientTrip>(entity =>
+        modelBuilder.Entity<Models.ClientTrip>(entity =>
         {
             entity.HasKey(e => new { e.IdClient, e.IdTrip }).HasName("Client_Trip_pk");
 

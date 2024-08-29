@@ -9,11 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c84697e-12bd-44c0-9223-9a4545864317" name="Changes" comment="asdasd">
+    <list default="true" id="8c84697e-12bd-44c0-9223-9a4545864317" name="Changes" comment="v2">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cw9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cw9/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cw9/Client/ClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cw9/Client/ClientRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cw9/Client/ClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cw9/Client/ClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cw9/Client/IClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cw9/Client/IClientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cw9/Client/IClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cw9/Client/IClientService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cw9/Context/Kuba2Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cw9/Context/Kuba2Context.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cw9/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cw9/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cw9/Trip/ITripRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cw9/Trip/ITripRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cw9/Trip/TripRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cw9/Trip/TripRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/08338fcaa5c9b9a8190abb99222fed12aaba956c/src/libraries/System.Linq/src/System/Linq/AnyAll.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/kuba2/OneDrive/Pulpit/PJATK/SEM_4/APBD/apbdCw9/cw9/cw9/Client/ClientRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -116,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724882482299</updated>
       <workItem from="1724882484845" duration="355000" />
-      <workItem from="1724882851468" duration="7525000" />
+      <workItem from="1724882851468" duration="10208000" />
     </task>
     <task id="LOCAL-00001" summary="asdasd">
       <option name="closed" value="true" />
@@ -126,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724932690232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v2">
+      <option name="closed" value="true" />
+      <created>1724933399503</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724933399503</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="asdasd" />
-    <option name="LAST_COMMIT_MESSAGE" value="asdasd" />
+    <MESSAGE value="v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
   </component>
 </project>

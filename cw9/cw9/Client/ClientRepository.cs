@@ -46,7 +46,7 @@ public class ClientRepository : IClientRepository
     
     public async Task<bool> IsClientStoredAsync(int clientId)
     {
-        return await _context.Set<ClientTrip>() // Zakładając, że ClientTrip to klasa reprezentująca tabelę Client_Trip
+        return await _context.Set<Models.ClientTrip>() // Zakładając, że ClientTrip to klasa reprezentująca tabelę Client_Trip
             .AnyAsync(ct => ct.IdClient == clientId);
     }
     

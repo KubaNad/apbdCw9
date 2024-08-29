@@ -3,6 +3,6 @@
 public interface ITripRepository
 {
     Task<IEnumerable<Models.Trip>> GetAllTripsAsync(int page, int pageSize);
-    // Task<Models.Trip?> GetTripByIdAsync(int tripId);
+    Task<Models.Trip?> GetTripByIdAsync(int tripId);
     Task<int> GetTripsCountAsync();
 }

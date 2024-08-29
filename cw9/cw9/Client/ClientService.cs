@@ -29,39 +29,39 @@ public class ClientService : IClientService
         return await _clientRepository.SaveChangesAsync();
     }
 
-    // public async Task<bool> AssignClientToTripAsync(Models.Client client, int tripId, DateTime? paymentDate)
-    // {
-    //     var trip = await _tripRepository.GetTripByIdAsync(tripId);
-    //     if (trip == null || trip.DateFrom <= DateTime.Now)
-    //     {
-    //         return false;
-    //     }
-    //
-    //     var existingClient = await _clientRepository.GetClientByPeselAsync(client.Pesel);
-    //     if (existingClient != null)
-    //     {
-    //         var existingClientTrip = existingClient.ClientTrips.FirstOrDefault(ct => ct.IdTrip == tripId);
-    //         if (existingClientTrip != null)
-    //         {
-    //             return false;
-    //         }
-    //         client = existingClient;
-    //     }
-    //
-    //     var clientTrip = new ClientTrip
-    //     {
-    //         IdClient = client.IdClient,
-    //         IdTrip = tripId,
-    //         RegisteredAt = DateTime.Now,
-    //         PaymentDate = paymentDate
-    //     };
-    //
-    //     if (existingClient == null)
-    //     {
-    //         await _clientRepository.AddClientAsync(client);
-    //     }
-    //
-    //     client.ClientTrips.Add(clientTrip);
-    //     return await _clientRepository.SaveChangesAsync();
-    // }
+    public async Task<bool> AssignClientToTripAsync(Models.Client client, int tripId, DateTime? paymentDate)
+    {
+        var trip = await _tripRepository.GetTripByIdAsync(tripId);
+        if (trip == null || trip.DateFrom <= DateTime.Now)
+        {
+            return false;
+        }
+    
+        var existingClient = await _clientRepository.GetClientByPeselAsync(client.Pesel);
+        if (existingClient != null)
+        {
+            var existingClientTrip = existingClient.ClientTrips.FirstOrDefault(ct => ct.IdTrip == tripId);
+            if (existingClientTrip != null)
+            {
+                return false;
+            }
+            client = existingClient;
+        }
+    
+        var clientTrip = new Models.ClientTrip
+        {
+            IdClient = client.IdClient,
+            IdTrip = tripId,
+            RegisteredAt = DateTime.Now,
+            PaymentDate = paymentDate
+        };
+    
+        if (existingClient == null)
+        {
+            await _clientRepository.AddClientAsync(client);
+        }
+    
+        client.ClientTrips.Add(clientTrip);
+        return await _clientRepository.SaveChangesAsync();
+    }
 }
